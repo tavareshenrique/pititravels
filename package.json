@@ -1,0 +1,79 @@
+{
+  "name": "pititravels",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Henrique Tavares",
+    "email": "ihenrits@gmail.com",
+    "url": "https://pititravels.henriquetavares.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --max-warnings=0",
+    "test": "jest --maxWorkers=50%",
+    "test:watch": "jest --watch --maxWorkers=25%",
+    "test:ci": "jest --runInBand",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public",
+    "postinstall": "husky install",
+    "prepare": "husky install",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
+  },
+  "dependencies": {
+    "@styled-icons/evaicons-outline": "10.34.0",
+    "graphql": "15.6.0",
+    "graphql-request": "3.6.1",
+    "leaflet": "1.7.1",
+    "next": "11.1.2",
+    "next-pwa": "5.4.0",
+    "next-seo": "4.28.1",
+    "next-sitemap": "1.6.192",
+    "nextjs-progressbar": "0.0.11",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-leaflet": "3.2.2",
+    "react-responsive-carousel": "3.2.23",
+    "styled-components": "5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/preset-typescript": "7.14.5",
+    "@graphql-codegen/add": "3.1.0",
+    "@graphql-codegen/cli": "2.2.1",
+    "@graphql-codegen/typescript": "2.2.4",
+    "@graphql-codegen/typescript-operations": "2.1.8",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.1.2",
+    "@types/jest": "27.0.2",
+    "@types/leaflet": "1.7.5",
+    "@types/node": "16.11.4",
+    "@types/react": "17.0.32",
+    "@types/styled-components": "5.1.15",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
+    "babel-loader": "8.2.3",
+    "babel-plugin-styled-components": "1.13.3",
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.1.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.26.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "7.0.4",
+    "jest": "27.3.1",
+    "jest-styled-components": "7.0.5",
+    "lint-staged": "11.2.4",
+    "plop": "2.7.6",
+    "prettier": "2.4.1",
+    "typescript": "4.4.4"
+  }
+}
